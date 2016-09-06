@@ -10,7 +10,7 @@ public class RequiredWordsTest {
     @Test
     public void testGetSortedLines() throws Exception {
         
-        RequiredWords requiredWords = new RequiredWords();
+        RequiredWords requiredWords = RequiredWords.getRequiredWords();
 
         assertFalse(requiredWords.isWordRequired("Star"));
         
@@ -29,5 +29,6 @@ public class RequiredWordsTest {
         assertTrue(requiredWords.isWordRequired("Man"));
         assertTrue(requiredWords.isWordRequired("Fast"));
         assertTrue(requiredWords.isWordRequired("Star"));
+        assertFalse(requiredWords.isWordRequired("Trek"));
     }
 }

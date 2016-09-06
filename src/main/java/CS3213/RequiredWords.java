@@ -5,15 +5,27 @@ import java.util.Arrays;
 import java.util.HashSet;
 
 public class RequiredWords {
+    private static RequiredWords _instatnce;
     private HashSet<String> _requiredWords;
     
-    public RequiredWords() {
+    private RequiredWords() {
         this._requiredWords = new HashSet<String>();
+    }
+    
+    public static RequiredWords getRequiredWords() {
+        if (_instatnce == null) {
+            _instatnce = new RequiredWords();
+        }
+
+        return _instatnce;
     }
 
     public void addRequiredWord(String word) {
-        assert(word != null);
-        this._requiredWords.addAll(splitWord(word));
+        if (word == null || word.equalsIgnoreCase("")){
+            return;
+        } else {
+            this._requiredWords.addAll(splitWord(word));
+        }
     }
 
     public boolean isWordRequired(String word) {
@@ -31,4 +43,5 @@ public class RequiredWords {
         tempArray.addAll(new ArrayList<String>(Arrays.asList(temp)));
         return tempArray;
     }
+    
 }
