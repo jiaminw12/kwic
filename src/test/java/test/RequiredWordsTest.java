@@ -11,8 +11,6 @@ public class RequiredWordsTest {
     public void testGetSortedLines() throws Exception {
         
         RequiredWords requiredWords = new RequiredWords();
-
-        assertFalse(requiredWords.isWordRequired("Star"));
         
         String required = "Star, Space";
         requiredWords.addRequiredWord(required);
