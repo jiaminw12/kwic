@@ -1,7 +1,6 @@
 package test;
 
 import CS3213.Alphabetizer;
-import CS3213.RequiredWords;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
