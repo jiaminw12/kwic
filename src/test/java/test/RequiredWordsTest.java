@@ -8,7 +8,7 @@ import static org.junit.Assert.*;
 public class RequiredWordsTest {
 
     @Test
-    public void testGetSortedLines() throws Exception {
+    public void testRequiredWords() throws Exception {
         
         RequiredWords requiredWords = RequiredWords.getRequiredWords();
 
