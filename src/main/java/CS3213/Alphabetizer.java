@@ -19,7 +19,7 @@ public class Alphabetizer {
     public void addLines(String[] lines) {
         for (String str : lines) {
             if (this._requiredWords.getRequiredWordsSize() > 0){
-                if (!(isStartingWithRequiredWords(capitalizeString(getFirstWord(str))))){
+                if (!(isStartingWithRequiredWords(getFirstWord(str)))){
                     continue;
                 }
             }
@@ -39,9 +39,5 @@ public class Alphabetizer {
     private String getFirstWord(String word){
         String arr[] = word.split(" ", 2);
         return arr[0];
-    }
-    
-    private String capitalizeString(String word){
-        return word.substring(0, 1).toUpperCase() + word.substring(1);
     }
 }
