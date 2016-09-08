@@ -56,6 +56,14 @@ public class KWICTest {
         assertEquals("Space Odyssey 2001: a", output2[0]);
         assertEquals("Star Trek", output2[1]);
         
+        wordsToIgnore.removeWordToIgnore("is");
+        wordsToIgnore.removeWordToIgnore("the");
+        wordsToIgnore.removeWordToIgnore("of");
+        wordsToIgnore.removeWordToIgnore("and");
+        wordsToIgnore.removeWordToIgnore("as");
+        wordsToIgnore.removeWordToIgnore("a");
+        wordsToIgnore.removeWordToIgnore("after");
+        
         requiredWords.removeRequiredWords("Star");
         requiredWords.removeRequiredWords("Space");
 
