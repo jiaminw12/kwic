@@ -23,7 +23,7 @@ public class Alphabetizer {
                 WordsToIgnore wordsToIgnore = WordsToIgnore.getWordsToIgnore();
                 
                 if (wordsToIgnore.isWordIgnored(str)){
-                    this._requiredWords.removeWordToIgnore(str);
+                    this._requiredWords.removeRequiredWords(str);
                 }
                 
                 if (!(isStartingWithRequiredWords(getFirstWord(str)))){

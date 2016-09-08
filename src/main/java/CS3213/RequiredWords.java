@@ -9,7 +9,7 @@ public class RequiredWords {
     private HashSet<String> _requiredWords;
     
     private RequiredWords() {
-        this._requiredWords = new HashSet<String>();
+        this._requiredWords = new HashSet<String>();   
     }
     
     public static RequiredWords getRequiredWords() {
@@ -33,7 +33,7 @@ public class RequiredWords {
         return this._requiredWords.contains(word);
     }
     
-    public void removeWordToIgnore(String word) {
+    public void removeRequiredWords(String word) {
         assert(word != null);
         this._requiredWords.remove(word);
     }
