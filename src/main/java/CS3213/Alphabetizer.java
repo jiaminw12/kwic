@@ -19,6 +19,13 @@ public class Alphabetizer {
     public void addLines(String[] lines) {
         for (String str : lines) {
             if (this._requiredWords.getRequiredWordsSize() > 0){
+                
+                WordsToIgnore wordsToIgnore = WordsToIgnore.getWordsToIgnore();
+                
+                if (wordsToIgnore.isWordIgnored(str)){
+                    this._requiredWords.removeWordToIgnore(str);
+                }
+                
                 if (!(isStartingWithRequiredWords(getFirstWord(str)))){
                     continue;
                 }

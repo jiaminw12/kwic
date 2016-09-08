@@ -8,6 +8,7 @@ import java.util.HashSet;
 public class WordsToIgnore {
     private HashSet<String> _wordsToIgnore;
     private static WordsToIgnore _instatnce;
+    
     private WordsToIgnore() {
         this._wordsToIgnore = new HashSet<String>();
     }

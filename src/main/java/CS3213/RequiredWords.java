@@ -33,6 +33,11 @@ public class RequiredWords {
         return this._requiredWords.contains(word);
     }
     
+    public void removeWordToIgnore(String word) {
+        assert(word != null);
+        this._requiredWords.remove(word);
+    }
+    
     public int getRequiredWordsSize(){
         return this._requiredWords.size();
     }
