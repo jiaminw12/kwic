@@ -31,5 +31,10 @@ public class WordsToIgnoreTest {
         assertFalse(wordsToIgnore.isWordIgnored(""));
         assertTrue(wordsToIgnore.isWordIgnored("after"));
         assertFalse(wordsToIgnore.isWordIgnored("before"));
+        
+        wordsToIgnore.removeWordToIgnore("the");
+        wordsToIgnore.removeWordToIgnore("of");
+        wordsToIgnore.removeWordToIgnore("");
+        wordsToIgnore.removeWordToIgnore("after");
     }
 }

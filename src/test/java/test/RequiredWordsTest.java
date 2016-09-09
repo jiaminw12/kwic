@@ -30,5 +30,11 @@ public class RequiredWordsTest {
         assertTrue(requiredWords.isWordRequired("Fast"));
         assertTrue(requiredWords.isWordRequired("Star"));
         assertFalse(requiredWords.isWordRequired("Trek"));
+        
+        requiredWords.removeRequiredWords("Star");
+        requiredWords.removeRequiredWords("Space");
+        requiredWords.removeRequiredWords("Day");
+        requiredWords.removeRequiredWords("Fast");
+        requiredWords.removeRequiredWords("Man");
     }
 }
