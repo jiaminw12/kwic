@@ -24,7 +24,7 @@ public class RequiredWords {
         if (word == null || word.equalsIgnoreCase("")){
             return;
         } else {
-            this._requiredWords.addAll(splitWord(word));
+            this._requiredWords.addAll(removeWordsToIgnore(splitWord(word)));
         }
     }
 
@@ -40,6 +40,17 @@ public class RequiredWords {
     
     public int getRequiredWordsSize(){
         return this._requiredWords.size();
+    }
+    
+    private static ArrayList<String> removeWordsToIgnore (ArrayList<String> afterSplit){
+        WordsToIgnore wordIgnore = WordsToIgnore.getWordsToIgnore();
+        ArrayList<String> tempArray = new ArrayList<String>();
+        for (int i = 0; i < afterSplit.size(); i++){
+            if(!(wordIgnore.isWordIgnored(afterSplit.get(i)))){
+                tempArray.add(afterSplit.get(i));
+            }
+        }
+        return tempArray;
     }
     
     private static ArrayList<String> splitWord(String stringToBeSplit) {

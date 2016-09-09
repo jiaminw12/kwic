@@ -45,7 +45,9 @@ public class KWICTest {
         assertEquals("Trek Star", output[10]);
         
         RequiredWords requiredWords = RequiredWords.getRequiredWords();
-        requiredWords.addRequiredWord("Star, Space");
+        requiredWords.addRequiredWord("Star, Space, the");
+        assertFalse(requiredWords.isWordRequired("the"));
+        
         alphabetizer = new Alphabetizer();
         for (String str : lines) {
             CircularShift shifter = new CircularShift(str);
