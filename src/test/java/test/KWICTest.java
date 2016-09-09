@@ -11,7 +11,7 @@ import static org.junit.Assert.*;
 public class KWICTest {
 
     @Test
-    public void testGetSortedLines() throws Exception {
+    public void testKWICTest() throws Exception {
         
         
         String[] lines = {"The Day after Tomorrow", "Fast and Furious", "Man of Steel", "Star Trek", "2001: a Space Odyssey"};
